@@ -1,0 +1,10 @@
+<launch>
+    <arg name="render" default="true"/>
+    
+    <!-- realsense_visualize 노드 실행 -->
+    <node name="realsense_cam_detection" pkg="realsense_node" type="pyreal_1cam_body_hand_yolo.py" output="screen"/>
+    <node name="visualization" pkg="realsense_node" type="visualize.py" output="screen"/>
+
+    <!-- rviz 실행 -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find realsense_node)/rviz/pose.rviz"/>
+</launch>
