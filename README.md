@@ -5,8 +5,12 @@
 
 
 
+***
+
+※ Tested on Jetson Xavier NX , Jetpack 5.1.2 , ROS Noetic
 
 ### Only used YOLOv8n-pose (FPS : 18~20)
+
 ```bash
 roslaunch realsense_node realsense_rviz_only_yolo.launch
 ```
