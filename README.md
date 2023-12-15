@@ -5,12 +5,9 @@
 
 
 
-***
-
-※ Tested on Jetson Xavier NX , Jetpack 5.1.2 , ROS Noetic
 
 ### Only used YOLOv8n-pose (FPS : 18~20)
-
+※ Tested on Jetson Xavier NX , Jetpack 5.1.2 , ROS Noetic
 ```bash
 roslaunch realsense_node realsense_rviz_only_yolo.launch
 ```
@@ -22,6 +19,7 @@ roslaunch realsense_node realsense_rviz_only_yolo.launch
 
 
 ### Used YOLOv8n-pose & mediapipe (FPS : 8~10)
+※ Tested on Jetson Xavier NX , Jetpack 5.1.2 , ROS Noetic
 ```bash
 roslaunch realsense_node realsense_rviz.launch
 ```
