@@ -16,7 +16,7 @@ RENDER = True
 
 class realsense_process:
     def __init__(self):
-        self.pub_distance = rospy.Publisher('/hand', Float32MultiArray, queue_size=1)
+        self.pub_distance = rospy.Publisher('/hand_xyz', Float32MultiArray, queue_size=1)
         self.hands_msg = Float32MultiArray()
         self.left_hand = np.zeros(3)
         self.right_hand = np.zeros(3)
@@ -141,9 +141,9 @@ def main():
                 realy = -realy
 
                 if hand_side == 'Left':
-                    realsense_p.left_hand = np.array([realx, realy, realz])
+                    realsense_p.left_hand = np.array([-realx, realz, realy])
                 elif hand_side == 'Right':
-                    realsense_p.right_hand = np.array([realx, realy, realz])
+                    realsense_p.right_hand = np.array([-realx, realz, realy])
 
                 if RENDER == True:
                     images = cv2.putText(images, f"{hand_side} Hand xyz : ({realx:0.3}, {realy:0.3}, {realz:0.3})", org2, font, fontScale, color, thickness, cv2.LINE_AA)

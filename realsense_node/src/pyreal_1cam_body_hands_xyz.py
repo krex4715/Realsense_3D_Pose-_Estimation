@@ -70,7 +70,7 @@ def main():
     mpDraw = mp.solutions.drawing_utils
 
     # ====== YOLO ======
-    yolo_model = YOLO('/home/harco/catkin_ws/src/realsense_node/src/yolov8n-pose.pt')
+    yolo_model = YOLO('/home/krex/catkin_ws/src/realsense_node/src/yolov8n-pose.pt')
 
 
 

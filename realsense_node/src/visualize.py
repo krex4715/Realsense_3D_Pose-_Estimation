@@ -37,6 +37,7 @@ class realsense_visualize:
     def hand_callback(self, msg):
         self.left_hand = msg.data[0:3]
         self.right_hand = msg.data[3:6]
+        print(self.right_hand)
 
     def body_callback(self, msg):
         self.head = msg.data[0:3]

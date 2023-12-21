@@ -66,7 +66,7 @@ def main():
 
 
     # ====== YOLO ======
-    yolo_model = YOLO('/home/harco/catkin_ws/src/realsense_node/src/yolov8n-pose.pt')
+    yolo_model = YOLO('/home/krex/catkin_ws/src/realsense_node/src/yolov8x-pose.pt')
 
 
 
@@ -96,7 +96,7 @@ def main():
     print(f"\tDepth Scale for Camera SN {device} is: {depth_scale}")
 
     # ====== Set clipping distance ======
-    clipping_distance_in_meters = 2
+    clipping_distance_in_meters = 4
     clipping_distance = clipping_distance_in_meters / depth_scale
     print(f"\tConfiguration Successful for SN {device}")
         
